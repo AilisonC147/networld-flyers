@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8"><meta name="robots" content="noindex">
+<title>GBase Support チラシ A4（百貨店向け・Networld 配布用・未定稿）</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+@page { size: 210mm 297mm; margin: 0; }
+:root {
+  --brand: #6F5DE2; --brand-d: #5445C3; --brand-l: #EFEBFF; --brand-ll: #F7F5FF; --brand-line: #DCD5FF;
+  --navy: #0E1729; --ink: #1A2137; --sub: #566179; --mute: #8A94A7; --line: #E4E8EF; --bg: #F2F4F6;
+  --yellow: #FFCB2E; --yellow-l: #FFF1C2; --orange: #F07809; --orange-l: #FFF3E6;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { background: #8892A0; font-family: 'Noto Sans JP', sans-serif; color: var(--ink); font-feature-settings: "palt"; }
+.en { font-family: 'Outfit', 'Noto Sans JP', sans-serif; }
+.page { width: 210mm; height: 297mm; background: #fff; position: relative; overflow: hidden; margin: 6mm auto; page-break-after: always; break-after: page; display: flex; flex-direction: column; }
+@media print { body { background: #fff; } .page { margin: 0; } }
+.b { color: var(--brand); }
+
+/* ヘッダー */
+.hd { height: 15mm; flex: 0 0 15mm; padding: 0 12mm; display: flex; align-items: center; }
+.hd img { height: 8mm; display: block; }
+
+/* セクション見出し */
+.sec { padding: 0 12mm; }
+.eyebrow { font-size: 8pt; font-weight: 700; color: var(--brand-d); }
+.h2 { font-size: 15.5pt; font-weight: 900; color: var(--navy); margin-top: 1mm; letter-spacing: .01em; }
+
+/* ───── 表面：Hero ───── */
+.hero { flex: 0 0 82mm; background: linear-gradient(100deg, #FBF9F6 0%, #F6F3FF 55%, #EEE9FF 100%); position: relative; overflow: hidden; }
+.hero .txt { position: absolute; left: 12mm; top: 13mm; width: 102mm; }
+.pill { display: inline-block; background: var(--yellow); color: var(--navy); font-weight: 700; font-size: 9pt; padding: 1.4mm 4.5mm; border-radius: 10mm; }
+h1 { font-weight: 900; font-size: 27pt; line-height: 1.34; margin-top: 4.5mm; color: var(--navy); letter-spacing: .01em; }
+h1 .b { color: var(--brand); }
+.lead { font-size: 9.6pt; line-height: 1.8; color: var(--sub); font-weight: 500; margin-top: 4mm; }
+.mascot { position: absolute; left: 110mm; bottom: -2mm; height: 80mm; }
+.bub { position: absolute; font-size: 7.6pt; line-height: 1.5; border-radius: 2.4mm; padding: 1.8mm 3mm; max-width: 52mm; }
+.bub.q { background: var(--navy); color: #fff; right: 10mm; }
+.bub.a { background: #fff; color: var(--ink); right: 10mm; box-shadow: 0 0 0 0.25mm var(--line); padding-left: 8.5mm; }
+.bub.a::before { content: "AI"; position: absolute; left: 2.2mm; top: 1.9mm; width: 4.6mm; height: 4.6mm; border-radius: 50%; background: var(--brand); color: #fff; font-size: 5.6pt; font-weight: 700; text-align: center; line-height: 4.6mm; }
+.bub .map { display: block; color: var(--brand-d); font-size: 6.6pt; margin-top: 0.8mm; font-weight: 700; }
+.lang { position: absolute; right: 10mm; bottom: 5mm; background: var(--brand); color: #fff; font-size: 7.4pt; font-weight: 700; padding: 1.2mm 3.4mm; border-radius: 10mm; }
+
+/* ───── 表面：痛点 ───── */
+.pains { flex: 0 0 auto; margin-top: 6mm; }
+.cards3 { display: flex; gap: 3.4mm; margin-top: 3mm; }
+.pain { flex: 1; background: var(--bg); border-radius: 2.6mm; padding: 2.6mm 2.6mm 3mm; text-align: center; }
+.pain img { width: 100%; height: 30mm; object-fit: cover; border-radius: 1.6mm; background: #fff; display: block; }
+.pain .k { font-size: 6.8pt; color: var(--mute); margin-top: 2mm; font-weight: 500; }
+.pain .t { font-size: 9pt; font-weight: 900; color: var(--navy); margin-top: 0.6mm; line-height: 1.45; }
+.arrow { text-align: center; font-size: 10.5pt; font-weight: 900; color: var(--navy); margin: 3.4mm 0 2.6mm; }
+.arrow .b { color: var(--brand); }
+.arrow i { font-style: normal; color: var(--brand); margin: 0 3mm; }
+
+/* 解決 */
+.sol { flex: 1; background: var(--brand-ll); border: 0.3mm solid var(--brand-line); border-radius: 2.6mm; padding: 3mm 3.6mm 3.4mm; }
+.sol .ic { width: 8.4mm; height: 8.4mm; border-radius: 50%; background: #fff; border: 0.3mm solid var(--brand-line); margin: 0 auto; display: flex; align-items: center; justify-content: center; }
+.sol .ic svg { width: 4.4mm; height: 4.4mm; stroke: var(--brand-d); fill: none; stroke-width: 2; }
+.sol h4 { font-size: 9.6pt; font-weight: 900; color: var(--navy); text-align: center; margin: 2mm 0 2mm; }
+.sol h4 sup { font-size: 6pt; color: var(--mute); }
+.sol li { list-style: none; font-size: 7.4pt; line-height: 1.5; padding-left: 4mm; position: relative; margin-top: 1mm; }
+.sol li::before { content: "✓"; position: absolute; left: 0; color: var(--brand); font-weight: 700; }
+
+/* 効果 */
+.eff { margin-top: 5.5mm; }
+.effs { display: flex; gap: 4mm; margin-top: 2.6mm; }
+.ef { flex: 1; border-radius: 2.6mm; padding: 3.4mm 4mm 2.8mm; text-align: center; position: relative; }
+.ef.l { background: #E9F1FC; }
+.ef.r { background: var(--orange-l); }
+.ef h5 { font-size: 9.4pt; font-weight: 900; color: var(--navy); }
+.ef .n { font-weight: 900; color: var(--brand-d); margin-top: 0.4mm; line-height: 1.1; font-size: 10pt; }
+.ef .n .en { font-size: 25pt; font-weight: 800; margin: 0 1mm; }
+.ef.r .n { color: var(--orange); }
+.ef.r .n small { color: var(--navy); font-size: 9pt; }
+.bars { display: flex; justify-content: center; align-items: flex-end; gap: 6mm; height: 15mm; margin-top: 1.4mm; }
+.bars div { width: 18mm; border-radius: 0.8mm 0.8mm 0 0; font-size: 6pt; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.ef.l .bars .x { height: 15mm; background: #D3D8E2; color: var(--sub); }
+.ef.l .bars .y { height: 5mm; background: #2A6AD5; color: #fff; }
+.ef.r .bars .x { height: 3mm; background: #E6DED4; color: var(--sub); font-size: 5.6pt; }
+.ef.r .bars .y { height: 15mm; background: var(--orange); color: #fff; }
+.ef .src { font-size: 6.4pt; color: var(--sub); margin-top: 1.6mm; }
+.note { font-size: 6.2pt; color: var(--mute); text-align: center; margin-top: 1.6mm; }
+
+.strip { margin-top: auto; flex: 0 0 10mm; background: var(--brand); color: #fff; display: flex; align-items: center; padding: 0 12mm; font-size: 8pt; font-weight: 700; }
+.strip .u { margin-left: auto; font-size: 11pt; font-weight: 800; }
+.strip .co { border-left: 0.3mm solid rgba(255,255,255,.5); margin-left: 4mm; padding-left: 4mm; font-size: 8pt; }
+
+/* ───── 裏面 ───── */
+.feat { background: linear-gradient(100deg, #fff 0%, #F7F5FF 60%, #FFF6EC 100%); padding-top: 4mm; padding-bottom: 5mm; flex: 0 0 auto; }
+.fwrap { display: flex; gap: 4.5mm; margin-top: 3.4mm; align-items: flex-start; }
+.fwrap > img { width: 76mm; border-radius: 2mm; box-shadow: 0 0 0 0.3mm var(--line); display: block; }
+.fgrid { flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 2.2mm 3.4mm; }
+.fi { display: flex; gap: 2mm; }
+.fi .ic { flex: 0 0 5.6mm; height: 5.6mm; border-radius: 1.4mm; background: var(--brand-l); display: flex; align-items: center; justify-content: center; }
+.fi .ic svg { width: 3.4mm; height: 3.4mm; stroke: var(--brand-d); fill: none; stroke-width: 2; }
+.fi b { display: block; font-size: 8pt; font-weight: 900; color: var(--navy); }
+.fi span { display: block; font-size: 6.7pt; line-height: 1.45; color: var(--sub); margin-top: 0.3mm; }
+
+/* 百貨店 FAQ 例 */
+.faq { margin: 4.5mm 12mm 0; background: var(--navy); border-radius: 2.6mm; padding: 3mm 4.5mm 3.4mm; color: #fff; }
+.faq .t { font-size: 9pt; font-weight: 900; }
+.faq .t em { font-style: normal; color: var(--yellow); }
+.faq .tags { display: flex; flex-wrap: wrap; gap: 1.6mm; margin-top: 2.2mm; }
+.faq .tags span { background: rgba(255,255,255,.1); border: 0.25mm solid rgba(255,255,255,.28); border-radius: 1.4mm; padding: 1mm 2.4mm; font-size: 7.2pt; font-weight: 500; }
+.faq .s { font-size: 6.8pt; color: #C8CEDA; margin-top: 2mm; }
+
+.cases { margin-top: 5mm; }
+.cgrid { display: flex; gap: 3.4mm; margin-top: 2.6mm; }
+.cs { flex: 1; border: 0.3mm solid var(--line); border-radius: 2.4mm; overflow: hidden; display: flex; flex-direction: column; }
+.cs .im { height: 27mm; position: relative; background: #EEF; }
+.cs .im img.ph { width: 100%; height: 100%; object-fit: cover; display: block; }
+.cs .im img.lg { position: absolute; right: 1.6mm; bottom: 1.6mm; height: 6mm; background: #fff; padding: 1mm 1.6mm; border-radius: 1mm; max-width: 30mm; object-fit: contain; }
+.cs .bd { padding: 2.4mm 3mm 3mm; }
+.cs .co { font-size: 6.6pt; color: var(--sub); font-weight: 700; }
+.cs h5 { font-size: 8.4pt; font-weight: 900; color: var(--navy); line-height: 1.45; margin-top: 1mm; }
+.cs p { font-size: 6.7pt; line-height: 1.6; color: var(--ink); margin-top: 1.4mm; }
+.cnote { font-size: 6pt; color: var(--mute); margin-top: 1.4mm; }
+
+.fs { margin-top: 4.5mm; background: var(--brand-ll); padding: 3.6mm 12mm 3.8mm; display: flex; gap: 5mm; }
+.flow { flex: 1; }
+.flow .t, .secu .t { font-size: 9.4pt; font-weight: 900; color: var(--navy); }
+.flow .t em { font-style: normal; font-size: 6.6pt; background: var(--brand-d); color: #fff; padding: 0.6mm 2mm; border-radius: 1mm; margin-left: 2mm; vertical-align: 0.4mm; }
+.steps { display: flex; align-items: center; gap: 1.6mm; margin-top: 2.4mm; }
+.st { flex: 1; background: #fff; border-radius: 2mm; padding: 2.2mm 2.4mm; display: flex; gap: 1.8mm; }
+.st i { font-style: normal; flex: 0 0 5mm; height: 5mm; border-radius: 50%; background: var(--brand); color: #fff; font-size: 7pt; font-weight: 800; text-align: center; line-height: 5mm; }
+.st b { font-size: 7.8pt; font-weight: 900; color: var(--navy); display: block; }
+.st span { font-size: 6.3pt; line-height: 1.45; color: var(--sub); display: block; margin-top: 0.3mm; }
+.steps .ar { color: var(--brand); font-size: 7pt; }
+.secu { flex: 0 0 52mm; border-left: 0.3mm solid var(--brand-line); padding-left: 5mm; }
+.iso { background: #fff; border-radius: 2mm; padding: 1.8mm 2.6mm; margin-top: 2mm; display: flex; gap: 2mm; align-items: center; }
+.iso i { font-style: normal; flex: 0 0 4.4mm; height: 4.4mm; border-radius: 50%; background: #22A35A; color: #fff; font-size: 6pt; text-align: center; line-height: 4.4mm; }
+.iso b { font-size: 7.6pt; font-weight: 900; display: block; color: var(--navy); }
+.iso span { font-size: 6.3pt; color: var(--sub); }
+
+.cta { margin-top: auto; flex: 0 0 47mm; background: var(--navy); padding: 6mm 12mm 0; display: flex; gap: 8mm; color: #fff; }
+.qrbox { flex: 0 0 104mm; background: #fff; border-radius: 3mm; padding: 4mm; display: flex; gap: 4.5mm; align-items: center; color: var(--navy); height: 33mm; }
+.qrbox img { width: 25mm; height: 25mm; }
+.qrbox .k { font-size: 11pt; font-weight: 900; }
+.qrbox .k em { font-style: normal; background: linear-gradient(transparent 60%, var(--yellow) 60%); }
+.qrbox .u { font-size: 17pt; font-weight: 800; color: var(--brand-d); margin-top: 0.4mm; }
+.qrbox .s { font-size: 7.4pt; color: var(--sub); margin-top: 0.6mm; }
+.co { font-size: 7.4pt; line-height: 1.65; }
+.co .tag { display: inline-block; border: 0.3mm solid var(--yellow); color: var(--yellow); font-size: 7.2pt; font-weight: 700; padding: 0.6mm 2.4mm; border-radius: 1mm; }
+.co .nm { font-size: 12pt; font-weight: 900; margin: 1.4mm 0 0.6mm; }
+.tm { position: absolute; left: 12mm; bottom: 2.6mm; font-size: 6pt; color: #8A94A7; }
+
+
+/* 1 回目プレビュー：表面 +5mm・裏面 +19mm はみ出し、気泡の重なり → 圧縮 */
+.hero { flex-basis: 76mm; }
+.hero .txt { top: 11mm; }
+.mascot { height: 75mm; }
+.bub { max-width: 60mm; }
+.pain img { height: 25mm; }
+.pains { margin-top: 5mm; }
+.arrow { margin: 2.6mm 0 2.2mm; }
+.eff { margin-top: 4.5mm; }
+.bars { height: 12mm; }
+.ef.l .bars .x, .ef.r .bars .y { height: 12mm; }
+.ef.l .bars .y { height: 4mm; }
+.feat { padding-top: 2mm; padding-bottom: 4mm; }
+.faq { margin-top: 3.6mm; padding: 2.6mm 4.5mm 2.8mm; }
+.faq .tags { margin-top: 1.8mm; gap: 1.4mm; }
+.faq .s { margin-top: 1.6mm; }
+.cases { margin-top: 4mm; }
+.cs .im { height: 22mm; }
+.cs .bd { padding: 2mm 2.8mm 2.4mm; }
+.cs p { line-height: 1.55; margin-top: 1mm; }
+.fs { margin-top: 3.6mm; padding: 3mm 12mm 3.2mm; }
+.secu { flex-basis: 50mm; }
+.iso { margin-top: 1.6mm; padding: 1.4mm 2.4mm; }
+.iso b { display: inline; margin-right: 1.6mm; }
+.cta { flex-basis: 40mm; padding-top: 4.5mm; position: relative; }
+.qrbox { height: 29mm; padding: 3mm 4mm; }
+.qrbox img { width: 23mm; height: 23mm; }
+.tm { bottom: 2.2mm; }
+
+
+/* 2 回目：表面の下余白 12mm を図に配分／ISO の折返し・社名の 1 文字折返しを解消 */
+.pain img { height: 30mm; }
+.bars { height: 14mm; }
+.ef.l .bars .x, .ef.r .bars .y { height: 14mm; }
+.ef.l .bars .y { height: 4.6mm; }
+.iso b { display: block; margin: 0; }
+.iso span { display: block; }
+.secu .iso { margin-top: 1.4mm; padding: 1.2mm 2.4mm; }
+.cs .co { font-size: 6.2pt; letter-spacing: -0.02em; white-space: nowrap; }
+.cs .im { height: 25mm; }
+
+
+/* 3 回目：裏面の空き 20mm を事例写真・FAQ・区切り余白に配分 */
+.cs .im { height: 32mm; }
+.faq { margin-top: 5mm; padding: 3.4mm 4.5mm 3.6mm; }
+.faq .tags { margin-top: 2.4mm; }
+.faq .s { margin-top: 2.2mm; }
+.cases { margin-top: 5.5mm; }
+.fs { margin-top: 5mm; padding: 3.8mm 12mm 4mm; }
+.cta { flex-basis: 42mm; padding-top: 5.5mm; }
+
+/* 印刷用：ぼかし付き box-shadow は PDF で SMask になるため無効化（layout-rules §5） */
+@media print { * { box-shadow: none !important; } .bub.a, .fwrap > img { outline: 0.25mm solid var(--line); } }
+</style>
+</head>
+<body>
+
+<!-- ═════════ 表面 ═════════ -->
+<section class="page">
+  <div class="hd"><img src="assets/logo_support.png" alt="GBase Support"></div>
+
+  <div class="hero">
+    <div class="txt">
+      <span class="pill">百貨店向け</span>
+      <h1>売場の案内を、<br><span class="b">AI コンシェルジュ</span>に。</h1>
+      <p class="lead">ブランドの場所も、営業時間も、催事も、免税も。<br>館内・Web・電話からの質問に AI が 24 時間・<br>10 言語で答え、必要なときは人につなぎます。</p>
+    </div>
+    <img class="mascot" src="assets/mascot.png" alt="">
+    <div class="bub q" style="top:8mm">化粧品売場はどこですか？</div>
+    <div class="bub a" style="top:15mm">1 階、中央エスカレーター付近です。<span class="map">◎ フロアマップで道順を表示</span></div>
+    <div class="bub q" style="top:33mm">Where is the tax-free counter?</div>
+    <div class="bub a" style="top:40mm">It's on the 1st floor, next to<br>the information desk.</div>
+    <div class="lang">◎ 10+ 多言語対応</div>
+  </div>
+
+  <div class="sec pains">
+    <div class="eyebrow">百貨店のお客様の課題</div>
+    <div class="h2">案内所・代表電話・インバウンド、<span class="b">こんなお悩み</span>はありませんか？</div>
+    <div class="cards3">
+      <div class="pain"><img src="assets/pain_desk.png" alt=""><div class="k">案内所・お問い合わせ窓口</div><div class="t">ブランドの場所、催事の日程…<br>同じ質問の繰り返し</div></div>
+      <div class="pain"><img src="assets/pain_phone.png" alt=""><div class="k">代表電話</div><div class="t">売場への取次と、<br>閉店後の取りこぼし</div></div>
+      <div class="pain"><img src="assets/pain_inbound.png" alt=""><div class="k">インバウンド</div><div class="t">免税・決済の質問に、<br>多言語で答えきれない</div></div>
+    </div>
+    <div class="arrow"><i>↓</i>これらの悩みを、<span class="b">GBase Support</span> が解決<i>↓</i></div>
+    <div class="cards3">
+      <div class="sol">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+        <h4>案内所の対応を 50〜70% 削減<sup>※</sup></h4>
+        <ul><li>売場・営業時間・催事の質問に AI がその場で回答</li><li>ブランドの場所はフロアマップで即答</li><li>店頭端末・QR・LINE・Web に対応</li></ul>
+      </div>
+      <div class="sol">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></div>
+        <h4>代表電話の受付と取次を AI へ</h4>
+        <ul><li>用件を聞き取り、売場・担当の直通へ転送</li><li>閉店後・繁忙期も 24 時間一次受付</li><li>「取次だけ」から始めて、いつでも戻せる</li></ul>
+      </div>
+      <div class="sol">
+        <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div>
+        <h4>10 言語以上を、通訳なしで</h4>
+        <ul><li>言語を自動判別し、母国語で案内</li><li>免税カウンターの場所や受付時間も即答</li><li>人が必要な相談だけスタッフへ</li></ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec eff">
+    <div class="eyebrow">導入効果</div>
+    <div class="h2">導入した施設では、<span class="b">こう変わりました</span></div>
+    <div class="effs">
+      <div class="ef l">
+        <h5>案内所・電話対応の件数</h5>
+        <div class="n">導入後 最大<span class="en">70</span>%削減</div>
+        <div class="bars"><div class="x">導入前</div><div class="y">導入後</div></div>
+        <div class="src">※ 株式会社ルミネ様「ニュウマン高輪」の事例</div>
+      </div>
+      <div class="ef r">
+        <h5>案内業務の自動回答率</h5>
+        <div class="n"><span class="en">90</span>%以上 <small>を AI が回答</small></div>
+        <div class="bars"><div class="x">有人対応</div><div class="y">AI が回答</div></div>
+        <div class="src">※ サッポロ不動産開発株式会社様「サッポロファクトリー」の事例</div>
+      </div>
+    </div>
+    <div class="note">数値は各社の公開事例に基づく実績です。効果は施設の規模・運用体制により異なります</div>
+  </div>
+
+  <div class="strip">売場案内・代表電話・インバウンド対応を、ひとつのナレッジで受け持つ AI コンシェルジュ<span class="u en">gbase.ai/support</span><span class="co">Sparticle株式会社</span></div>
+</section>
+
+<!-- ═════════ 裏面 ═════════ -->
+<section class="page">
+  <div class="hd"><img src="assets/logo_support.png" alt="GBase Support"></div>
+
+  <div class="sec feat">
+    <div class="eyebrow">主な機能</div>
+    <div class="h2">売場案内から電話・多言語まで、<span class="b">ひとつのナレッジで</span></div>
+    <div class="fwrap">
+      <img src="assets/screen_map.png" alt="GBase Support 施設案内の画面（導入例：ニュウマン高輪）">
+      <div class="fgrid">
+        <div class="fi"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/></svg></div><div><b>フロアマップ連携</b><span>地図上に位置とルートを案内。バリアフリーや最寄り設備にも対応</span></div></div>
+        <div class="fi"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4z"/></svg></div><div><b>FAQ・施設案内 AI</b><span>営業時間や催事、ブランド情報など、定型の質問に即答</span></div></div>
+        <div class="fi"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></div><div><b>マルチチャネル</b><span>店頭端末・QR・LINE・Web チャットに対応。専用端末は不要</span></div></div>
+        <div class="fi"><div class="ic"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></div><div><b>AI 電話受付・取次</b><span>用件を聞き取り、売場・部署の直通へ転送。24 時間一次受付</span></div></div>
+        <div class="fi"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M3 20a6 6 0 0 1 12 0M16 11l2 2 4-4"/></svg></div><div><b>有人対応へ切り替え</b><span>AI が答えられない質問や個別の相談はスタッフへ引き継ぎ</span></div></div>
+        <div class="fi"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18"/></svg></div><div><b>多言語の自動判別</b><span>日・英・中・韓など 10 言語以上。チャットも音声も電話も</span></div></div>
+        <div class="fi"><div class="ic"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v12c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12c0 1.7 3.1 3 7 3s7-1.3 7-3"/></svg></div><div><b>ナレッジの一元管理</b><span>FAQ・PDF・Web を登録するだけ。全チャネルで同じ情報を回答</span></div></div>
+        <div class="fi"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div><div><b>運用分析</b><span>よく聞かれる質問と未回答の質問を可視化し、FAQ を継続的に改善</span></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="faq">
+    <div class="t">百貨店で<em>よく聞かれる質問</em>も、登録した情報から AI が回答</div>
+    <div class="tags"><span>売場・ブランドの場所</span><span>営業時間・休業日</span><span>催事・物産展の会期</span><span>免税カウンター・決済方法</span><span>ギフト・包装・配送</span><span>駐車場・提携サービス</span></div>
+    <div class="s">売場の情報や催事の案内を登録しておけば、館内端末・Web・電話のどこから聞かれても同じ内容で答えます。</div>
+  </div>
+
+  <div class="sec cases">
+    <div class="eyebrow">導入事例</div>
+    <div class="h2">導入企業の<span class="b">声と成果</span></div>
+    <div class="cgrid">
+      <div class="cs">
+        <div class="im"><img class="ph" src="assets/case_sapporo_kiosk.png" alt=""><img class="lg" src="assets/logo_sapporo.png" alt="サッポロファクトリー"></div>
+        <div class="bd"><div class="co">サッポロ不動産開発株式会社様「サッポロファクトリー」</div>
+          <h5>Smart Kiosk で自動回答率 90%+<br>約 150 ショップの案内業務を自動化</h5>
+          <p>日本人の手による初のビール工場跡地に立つ大型複合商業施設。音声・タッチで施設案内し、答えられない相談はワンタッチで有人対応へ。約 150 ショップの店舗・設備案内を Smart Kiosk で自動化。</p></div>
+      </div>
+      <div class="cs">
+        <div class="im"><img class="ph" src="assets/case_newoman.jpg" alt=""><img class="lg" src="assets/logo_lumine.png" alt="LUMINE"></div>
+        <div class="bd"><div class="co">株式会社ルミネ様「ニュウマン高輪」</div>
+          <h5>案内所・電話対応を最大 70% 削減<br>AI と有人コンシェルジュが連携して案内</h5>
+          <p>ルミネ史上最大規模の新施設。QR・Web・大型端末で共通のナレッジを使い、フロアマップと連動した店舗・設備案内を多言語で提供。AI の一次案内と有人コンシェルジュをつなぎ、インバウンドの来館者にも対応。</p></div>
+      </div>
+      <div class="cs">
+        <div class="im"><img class="ph" src="assets/case_his.png" alt="" style="object-position:top"><img class="lg" src="assets/logo_his.png" alt="HIS Mobile"></div>
+        <div class="bd"><div class="co">H.I.S.Mobile株式会社様</div>
+          <h5>特定設問の問い合わせを約 60% 削減<br>申し込み・料金プランの質問に AI が回答</h5>
+          <p>格安 SIM の公式サイトのお問い合わせ窓口に AI チャットを導入。繰り返し寄せられる質問は AI が回答し、有人は個別の相談に集中。音声とテキストの両方に対応し、1 年近くの運用で窓口対応の効果を確認。</p></div>
+      </div>
+    </div>
+    <div class="cnote">※ 数値は各社の公開事例に基づく実績です。効果は施設の規模・運用体制により異なります</div>
+  </div>
+
+  <div class="fs">
+    <div class="flow">
+      <div class="t">導入の流れ<em>最短 1 週間・専用端末不要</em></div>
+      <div class="steps">
+        <div class="st"><i>1</i><div><b>ヒアリング</b><span>施設の課題・対応言語・連携先を確認</span></div></div><span class="ar">▶</span>
+        <div class="st"><i>2</i><div><b>設定・構築</b><span>FAQ・店舗情報・地図を登録し、回答を検証</span></div></div><span class="ar">▶</span>
+        <div class="st"><i>3</i><div><b>運用開始</b><span>会話データを見ながら、回答精度を改善</span></div></div>
+      </div>
+    </div>
+    <div class="secu">
+      <div class="t">セキュリティ</div>
+      <div class="iso"><i>✓</i><div><b>ISO/IEC 27001</b><span>ISMS 認証取得</span></div></div>
+      <div class="iso"><i>✓</i><div><b>ISO/IEC 27017</b><span>クラウドセキュリティ認証取得</span></div></div>
+    </div>
+  </div>
+
+  <div class="cta">
+    <div class="qrbox">
+      <img src="assets/qr_contact.png" alt="gbase.ai/contact QR">
+      <div><div class="k"><em>ご相談・資料請求・デモはこちら</em></div><div class="u en">gbase.ai/contact</div><div class="s">1 か月無料トライアルもご案内します</div></div>
+    </div>
+    <div class="co">
+      <span class="tag">中央区・日本橋の AI 企業です</span>
+      <div class="nm">Sparticle株式会社</div>
+      〒103-0001<br>東京都中央区日本橋小伝馬町6-12 日本橋森ビル 3F<br><span class="en">https://www.sparticle.com/</span><br>TEL 03-3527-2828（AI 自動応答 試験運用中）
+    </div>
+    <div class="tm">※ 記載の会社名・施設名・製品名は各社の商標または登録商標です。</div>
+  </div>
+  </section>
+
+</body>
+</html>

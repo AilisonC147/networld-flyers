@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8"><meta name="robots" content="noindex">
+<title>GBase チラシ A4（Box 連携・Networld 配布用・未定稿）</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+@page { size: 210mm 297mm; margin: 0; }
+:root {
+  --cyan: #00A4D6; --cyan-d: #0086B3; --cyan-l: #E3F5FB; --cyan-ll: #F4FAFD;
+  --navy: #0F172A; --navy-2: #1E293B; --ink: #1A2238; --sub: #56617A; --line: #DFE6EE;
+  --yellow: #FFCB2E; --yellow-l: #FFF1C2;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { background: #8892A0; font-family: 'Noto Sans JP', sans-serif; color: var(--ink); font-feature-settings: "palt"; }
+.en { font-family: 'Outfit', 'Noto Sans JP', sans-serif; }
+.page { width: 210mm; height: 297mm; background: #fff; position: relative; overflow: hidden; margin: 6mm auto; page-break-after: always; break-after: page; }
+@media print { body { background: #fff; } .page { margin: 0; } }
+b, strong { font-weight: 700; }
+.c { color: var(--cyan-d); }
+
+/* ───── 共通ヘッダー ───── */
+.hd { height: 15mm; padding: 0 12mm; display: flex; align-items: center; justify-content: space-between; background: #fff; position: relative; z-index: 2; }
+.hd img { height: 7.4mm; display: block; }
+.hd .ev { display: flex; align-items: stretch; font-size: 8pt; font-weight: 700; border-radius: 1.6mm; overflow: hidden; }
+.hd .ev span { padding: 1.5mm 3mm; background: var(--navy); color: #fff; }
+.hd .ev em { font-style: normal; padding: 1.5mm 3mm; background: var(--yellow); color: var(--navy); }
+
+/* ───── 表面 ───── */
+.hero { background: var(--cyan-ll); padding: 9mm 12mm 0; position: relative; height: 150mm; text-align: center; }
+.hero::before { content: ""; position: absolute; width: 96mm; height: 96mm; border: 9mm solid #D7EEF8; border-radius: 50%; right: -42mm; top: -34mm; }
+.hero::after { content: ""; position: absolute; width: 46mm; height: 46mm; border: 5mm solid var(--yellow-l); border-radius: 50%; left: -24mm; top: 58mm; }
+.hero > * { position: relative; z-index: 1; }
+.pill { display: inline-block; background: var(--yellow); color: var(--navy); font-weight: 700; font-size: 9.5pt; padding: 1.6mm 5mm; border-radius: 10mm; }
+.pill::before { content: ""; display: inline-block; width: 1.6mm; height: 1.6mm; border-radius: 50%; background: var(--navy); margin-right: 2mm; vertical-align: 0.5mm; }
+h1 { font-weight: 900; font-size: 29pt; line-height: 1.36; letter-spacing: 0.01em; margin-top: 5mm; color: var(--navy); }
+h1 .ul { background: linear-gradient(transparent 68%, #B5E6F7 68%); padding: 0 1mm; }
+.lead { font-size: 10.5pt; line-height: 1.8; color: var(--sub); font-weight: 500; margin-top: 4mm; }
+.stats { display: flex; gap: 3mm; justify-content: center; margin-top: 5.5mm; }
+.stat { background: #fff; border: 0.3mm solid var(--line); border-radius: 2.5mm; width: 50mm; padding: 2.4mm 2mm 2.6mm; }
+.stat .n { font-weight: 900; font-size: 17pt; color: var(--cyan); line-height: 1.2; }
+.stat .n small { font-size: 10pt; }
+.stat .n .en { font-size: 20pt; font-weight: 800; }
+.stat p { font-size: 8pt; font-weight: 500; color: var(--ink); margin-top: 0.6mm; }
+
+.vis { position: absolute !important; left: 12mm; right: 12mm; bottom: -13mm; height: 70mm; z-index: 3 !important; }
+.win { position: absolute; left: 27mm; right: 0; top: 0; bottom: 0; background: #fff; border-radius: 2.5mm; box-shadow: 0 3mm 9mm rgba(15,23,42,.16); overflow: hidden; border: 0.25mm solid var(--line); text-align: left; }
+.win .bar { height: 5.5mm; background: #EEF2F6; display: flex; align-items: center; gap: 1.1mm; padding-left: 3mm; }
+.win .bar i { width: 1.7mm; height: 1.7mm; border-radius: 50%; background: #CBD3DD; }
+.win .bar b { margin-left: 4mm; font-size: 6.5pt; color: var(--sub); font-weight: 500; }
+.win img { width: calc(100% - 9mm); margin-left: 9mm; display: block; }
+.win .tag { position: absolute; right: 3mm; bottom: 3mm; background: var(--navy); color: #fff; font-size: 8pt; font-weight: 700; padding: 1.3mm 3.2mm; border-radius: 1.5mm; }
+.phone { position: absolute; left: 0; bottom: -3mm; width: 33mm; height: 64mm; background: #05070B; border-radius: 5.5mm; border: 1.1mm solid #2A3140; box-shadow: 0 3mm 8mm rgba(15,23,42,.3); color: #fff; text-align: center; padding-top: 5mm; }
+.phone::before { content: ""; position: absolute; top: 1.6mm; left: 50%; width: 10mm; height: 2.4mm; margin-left: -5mm; background: #1A1F29; border-radius: 2mm; }
+.phone .st { font-size: 7pt; font-weight: 700; }
+.phone .to { display: inline-block; margin-top: 1.6mm; font-size: 5.6pt; background: #1B212C; border-radius: 3mm; padding: 0.8mm 2.2mm; color: #9AA6B8; }
+.phone .to b { color: #35C3EE; }
+.wave { display: flex; align-items: center; justify-content: center; gap: 0.55mm; height: 15mm; margin-top: 4mm; }
+.wave i { width: 0.6mm; background: var(--cyan); border-radius: 1mm; }
+.phone .tm { font-size: 17pt; font-weight: 500; margin-top: 2mm; }
+.phone .rec { width: 10mm; height: 10mm; border-radius: 50%; background: #F4433A; margin: 3.4mm auto 0; position: relative; box-shadow: 0 0 3mm rgba(244,67,58,.6); }
+.phone .rec::after { content: ""; position: absolute; inset: 3.4mm; background: #fff; border-radius: 0.6mm; }
+
+.scenes { padding: 20mm 12mm 0; }
+.sec-en { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 7.5pt; letter-spacing: 0.16em; color: var(--cyan); text-align: center; }
+h2 { font-weight: 900; font-size: 17pt; text-align: center; color: var(--navy); margin-top: 0.8mm; }
+.cards { display: flex; gap: 3.5mm; margin-top: 4.5mm; }
+.card { flex: 1; border: 0.3mm solid var(--line); border-radius: 3mm; overflow: hidden; background: #fff; display: flex; flex-direction: column; }
+.card .q { background: #F1F4F9; padding: 3.2mm 3.6mm 5mm; font-size: 8.4pt; line-height: 1.65; color: var(--sub); font-weight: 500; height: 30mm; }
+.card .q .lb { display: inline-block; background: #fff; border-radius: 3mm; padding: 0.6mm 2.6mm; font-size: 7.4pt; font-weight: 700; color: var(--ink); margin-bottom: 1.6mm; }
+.card .a { padding: 4.6mm 3.6mm 3.2mm; position: relative; flex: 1; }
+.card .a::before { content: "↓"; position: absolute; top: -3.2mm; left: 3.6mm; width: 6.4mm; height: 6.4mm; border-radius: 50%; background: var(--cyan); color: #fff; font-size: 9pt; font-weight: 700; line-height: 6.2mm; text-align: center; border: 0.5mm solid #fff; }
+.card .a .g { font-family: 'Outfit', 'Noto Sans JP', sans-serif; font-size: 7.6pt; font-weight: 700; color: var(--cyan); }
+.card .a p { font-size: 10pt; line-height: 1.6; font-weight: 700; color: var(--navy); margin-top: 0.8mm; }
+.card .f { border-top: 0.3mm dashed var(--line); margin: 0 3.6mm; padding: 2.2mm 0 2.8mm; font-size: 7.8pt; color: var(--sub); font-weight: 500; }
+.card .f::before { content: "✓ "; color: var(--cyan); font-weight: 700; }
+
+.foot1 { position: absolute; left: 0; right: 0; bottom: 0; height: 19mm; background: var(--navy); color: #fff; display: flex; align-items: center; padding: 0 12mm; gap: 5mm; }
+.foot1 .bn { background: var(--yellow); color: var(--navy); border-radius: 2mm; padding: 1.4mm 4mm 1.8mm; text-align: center; line-height: 1.15; }
+.foot1 .bn small { display: block; font-size: 6.6pt; font-weight: 700; }
+.foot1 .bn b { font-family: 'Outfit', sans-serif; font-size: 17pt; font-weight: 800; }
+.foot1 .tx { flex: 1; }
+.foot1 .tx b { display: block; font-size: 12pt; font-weight: 900; }
+.foot1 .tx span { font-size: 8pt; color: #B9C4D6; font-weight: 500; }
+.foot1 .ur { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 15pt; color: #5CD0F2; }
+.foot1 .ur small { display: block; font-family: 'Noto Sans JP', sans-serif; font-size: 6.8pt; color: #B9C4D6; font-weight: 500; text-align: right; }
+
+/* ───── 裏面 ───── */
+.how { background: var(--navy); color: #fff; padding: 8mm 12mm 8mm; }
+.how h2 { color: #fff; }
+.how h2 span { color: #35C3EE; }
+.how .sub { text-align: center; font-size: 9pt; color: #B9C4D6; margin-top: 1.2mm; font-weight: 500; }
+.steps { display: flex; gap: 4mm; margin-top: 5mm; }
+.step { flex: 1; }
+.step .shot { height: 31mm; background: #fff; border-radius: 2.4mm; overflow: hidden; position: relative; }
+.step .shot img { position: absolute; display: block; }
+.step .hdg { display: flex; align-items: baseline; gap: 2mm; margin-top: 3.4mm; }
+.step .no { font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 21pt; line-height: 1; color: transparent; -webkit-text-stroke: 0.35mm #35C3EE; }
+.step h3 { font-size: 11.4pt; font-weight: 900; line-height: 1.3; }
+.step p { font-size: 8.3pt; line-height: 1.7; color: #D5DCE8; margin-top: 1.8mm; min-height: 16.5mm; }
+.step ul { list-style: none; margin-top: 1.6mm; }
+.step li { font-size: 8pt; line-height: 1.5; font-weight: 500; padding-left: 4mm; position: relative; margin-top: 0.9mm; }
+.step li::before { content: "✓"; position: absolute; left: 0; color: #35C3EE; font-weight: 700; }
+
+.feat { padding: 6.5mm 12mm 0; }
+.feat h2 { font-size: 15pt; }
+.f5 { display: flex; gap: 2.6mm; margin-top: 4mm; }
+.fc { flex: 1; border: 0.3mm solid #BFE6F4; border-top: 1mm solid var(--cyan); border-radius: 2.4mm; padding: 2.6mm 2.6mm 3mm; background: #fff; }
+.fc .no { font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 9pt; color: #C5D0DC; float: right; }
+.fc h4 { font-size: 9.6pt; font-weight: 900; color: var(--navy); white-space: nowrap; }
+.fc .s { font-size: 6.8pt; font-weight: 700; color: var(--cyan-d); margin-top: 0.3mm; padding-bottom: 1.6mm; border-bottom: 0.25mm solid var(--line); }
+.fc ul { list-style: none; margin-top: 1.4mm; }
+.fc li { font-size: 7.5pt; line-height: 1.5; font-weight: 500; padding-left: 2.6mm; position: relative; margin-top: 0.7mm; }
+.fc li::before { content: ""; position: absolute; left: 0; top: 1.7mm; width: 1.1mm; height: 1.1mm; border-radius: 50%; background: var(--cyan); }
+
+.duo { display: flex; gap: 4mm; padding: 5.5mm 12mm 0; }
+.box { border-radius: 3mm; padding: 3.2mm 4.4mm; }
+.box h5 { font-size: 10.4pt; font-weight: 900; color: var(--navy); }
+.box h5 small { font-family: 'Outfit', sans-serif; font-size: 6.8pt; letter-spacing: .14em; color: var(--cyan); display: block; font-weight: 700; }
+.integ { flex: 0 0 66mm; background: var(--cyan-ll); }
+.integ .chips { display: flex; flex-wrap: wrap; gap: 1.4mm; margin-top: 2.4mm; }
+.integ .chips span { background: #fff; border: 0.25mm solid #CFE6F0; border-radius: 1.4mm; font-size: 7.8pt; font-weight: 700; padding: 0.9mm 2.4mm; }
+.integ .gl { font-size: 6.8pt; font-weight: 700; color: var(--sub); margin-top: 2.4mm; }
+.integ p { font-size: 7.6pt; line-height: 1.6; color: var(--sub); margin-top: 2.2mm; font-weight: 500; }
+.trust { flex: 1; border: 0.3mm solid var(--line); }
+.trust .g { display: grid; grid-template-columns: 1fr 1fr; gap: 2.2mm 4mm; margin-top: 2.4mm; }
+.trust .g b { display: block; font-size: 8.4pt; color: var(--navy); }
+.trust .g b::before { content: "● "; color: var(--cyan); font-size: 6pt; vertical-align: 0.4mm; }
+.trust .g span { display: block; font-size: 7.3pt; line-height: 1.55; color: var(--sub); font-weight: 500; }
+
+.cta { position: absolute; left: 0; right: 0; bottom: 0; height: 47mm; background: var(--cyan-ll); padding: 4.5mm 12mm 0; }
+.cta .row { display: flex; gap: 6mm; align-items: stretch; }
+.trial { flex: 0 0 104mm; background: #fff; border-radius: 3mm; box-shadow: 0 1.5mm 5mm rgba(15,23,42,.1); padding: 2.6mm 4mm; display: flex; gap: 4mm; align-items: center; }
+.trial img { width: 24mm; height: 24mm; display: block; }
+.trial .ft { font-family: 'Outfit', sans-serif; font-size: 7pt; font-weight: 700; letter-spacing: .14em; color: var(--cyan); }
+.trial .t1 { font-size: 14.5pt; font-weight: 900; color: var(--navy); line-height: 1.3; }
+.trial .t2 { font-family: 'Outfit', sans-serif; font-size: 19pt; font-weight: 800; color: var(--cyan); line-height: 1.15; }
+.trial .t3 { font-size: 7.4pt; color: var(--sub); font-weight: 500; margin-top: 0.8mm; }
+.co { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+.co .lc { display: inline-block; align-self: flex-start; background: var(--yellow); color: var(--navy); font-size: 7.8pt; font-weight: 700; padding: 0.8mm 3mm; border-radius: 3mm; }
+.co .nm { font-size: 12.5pt; font-weight: 900; color: var(--navy); margin-top: 2mm; }
+.co p { font-size: 7.8pt; line-height: 1.65; color: var(--ink); font-weight: 500; margin-top: 1mm; }
+.co p .en { font-weight: 700; }
+.note { position: absolute; left: 12mm; right: 12mm; bottom: 4.2mm; font-size: 5.8pt; line-height: 1.5; color: #7A8498; }
+
+/* ───── 裏面 v2：機能メイン ───── */
+.feat2 { padding: 5mm 12mm 0; }
+.feat2 h2 { font-size: 17pt; }
+.big3 { display: flex; gap: 3.5mm; margin-top: 4mm; }
+.bc, .sc { border: 0.3mm solid #BFE6F4; border-radius: 3mm; overflow: hidden; background: #fff; }
+.bc { flex: 1; }
+.im img.fit.ct { object-fit: contain; object-position: center; padding: 1mm 1.5mm 3mm; }
+.bc .im { height: 40mm; position: relative; overflow: hidden; background: #fff; border-bottom: 0.3mm solid #D9EEF6; }
+.im img { position: absolute; display: block; }
+.bc .tx { padding: 0 3.6mm 3.4mm; position: relative; }
+.ic { width: 8.4mm; height: 8.4mm; border-radius: 2mm; background: var(--cyan); display: flex; align-items: center; justify-content: center; }
+.ic svg { width: 5mm; height: 5mm; fill: none; stroke: #fff; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.bc .ic { margin-top: -4.2mm; border: 0.5mm solid #fff; box-sizing: content-box; position: relative; }
+.bc h4 { font-size: 12.5pt; font-weight: 900; color: var(--navy); margin-top: 1.4mm; }
+.bc .s { font-size: 7.6pt; font-weight: 700; color: var(--cyan-d); }
+.bc p { font-size: 8.3pt; line-height: 1.65; color: var(--ink); margin-top: 1.6mm; min-height: 17.5mm; }
+.bc ul { list-style: none; border-top: 0.3mm dashed var(--line); padding-top: 1.6mm; margin-top: 1.6mm; }
+.bc li { font-size: 7.8pt; font-weight: 500; color: var(--sub); line-height: 1.6; }
+.bc li::before { content: "✓ "; color: var(--cyan); font-weight: 700; }
+.sm2 { display: flex; gap: 3.5mm; margin-top: 3.5mm; }
+.sc { flex: 1; display: flex; height: 32mm; }
+.sc .im { flex: 0 0 38mm; position: relative; overflow: hidden; border-right: 0.3mm solid #D9EEF6; }
+.sc .tx { padding: 4.4mm 3.8mm; }
+.sc .ic { float: left; width: 6.4mm; height: 6.4mm; margin-right: 2mm; }
+.sc .ic svg { width: 4mm; height: 4mm; }
+.sc h4 { font-size: 11pt; font-weight: 900; color: var(--navy); line-height: 6.4mm; }
+.sc p { clear: both; font-size: 8pt; line-height: 1.6; padding-top: 1.4mm; }
+.strip { margin: 5.5mm 12mm 0; background: var(--navy); color: #fff; border-radius: 3mm; display: flex; align-items: center; padding: 3.6mm 4.5mm; gap: 2.4mm; }
+.strip .lb { flex: 0 0 23mm; font-size: 10pt; font-weight: 900; line-height: 1.35; }
+.strip .lb .en { display: block; font-size: 5.8pt; letter-spacing: .14em; color: #35C3EE; font-weight: 700; margin-bottom: 0.6mm; }
+.strip .st { flex: 1; display: flex; align-items: center; gap: 2.2mm; }
+.strip .ic { flex: 0 0 8.4mm; background: #1E3A52; }
+.strip .ic svg { stroke: #5CD0F2; }
+.strip b { display: block; font-size: 8.4pt; font-weight: 700; white-space: nowrap; }
+.strip b i { font-style: normal; color: #35C3EE; font-weight: 800; margin-right: 1.2mm; }
+.strip span { display: block; font-size: 6.8pt; color: #B9C4D6; white-space: nowrap; }
+.strip .ar { color: #4B5B75; font-size: 14pt; line-height: 1; }
+
+/* 機能配図：LP のイラストに合わせる */
+.im img.fit { position: static; width: 100%; height: 100%; object-fit: cover; object-position: left top; }
+.sc .im { flex: 0 0 41mm; background: #fff; }
+.sc h4 { font-size: 10.4pt; white-space: nowrap; }
+.sc .tx { padding: 4.2mm 3.4mm; }
+.sc p { font-size: 7.8pt; }
+.im.kn { padding: 2.6mm 2.6mm 0; background: #F7FBFD; }
+.kf { display: flex; align-items: center; gap: 1.6mm; background: #fff; border: 0.25mm solid var(--line); border-radius: 1.2mm; padding: 0.9mm 1.6mm; font-size: 6.4pt; font-weight: 700; color: var(--ink); margin-bottom: 1mm; width: 30mm; }
+.kf i { font-style: normal; font-family: 'Outfit', sans-serif; font-size: 4.6pt; color: #fff; border-radius: 0.7mm; width: 4.4mm; height: 3.4mm; display: flex; align-items: center; justify-content: center; }
+.kc { display: flex; justify-content: space-between; align-items: center; background: #EAF8F0; border: 0.25mm solid #A9DFC0; border-radius: 1.2mm; padding: 0.8mm 1.6mm; font-size: 6.2pt; margin: 0 0 0.9mm 4mm; white-space: nowrap; gap: 1.5mm; }
+.kc b { color: var(--ink); }
+.kc span { color: #1D8F4E; font-weight: 700; font-size: 5.4pt; }
+.im.kn .kb { position: absolute; right: 2mm; top: 2mm; background: #fff; border-radius: 3mm; box-shadow: 0 0.6mm 2mm rgba(15,23,42,.15); font-size: 5.8pt; font-weight: 700; padding: 0.7mm 2mm; color: var(--ink); }
+.im.kn .kb::first-letter { color: #1D8F4E; }
+
+/* ───── 裏面 v3：ネイビー面で機能を主役に ───── */
+.feat2 { background: var(--navy); color: #fff; padding: 7.5mm 12mm 7mm; }
+.feat2 .sec-en { color: #35C3EE; }
+.feat2 h2 { color: #fff; font-size: 17pt; }
+.feat2 h2 span { color: #35C3EE; }
+.bc { border: none; background: transparent; overflow: visible; }
+.bc .im { border: none; border-radius: 2.6mm; height: 40mm; box-shadow: 0 0 0 0.5mm rgba(53,195,238,.35); }
+.bc .tx { padding: 0 0.6mm 0; }
+.bc .ic { margin-left: 3mm; border-color: var(--navy); }
+.bc h4 { color: #fff; font-size: 13.5pt; }
+.bc .s { color: #35C3EE; }
+.bc p { color: #D5DCE8; min-height: 13.6mm; }
+.bc ul { border-top-color: #2E3B58; }
+.bc li { color: #fff; }
+.bc li::before { color: #35C3EE; }
+.sc { background: #1A2440; border-color: #2E3B58; }
+.sc .im { border-right: none; }
+.sc h4 { color: #fff; }
+.sc p { color: #D5DCE8; }
+.strip { margin: 0; border-radius: 0; background: var(--cyan); padding: 3.8mm 12mm; }
+.strip .lb .en { color: #fff; opacity: .85; }
+.strip .ic { background: #fff; }
+.strip .ic svg { stroke: var(--cyan-d); }
+.strip b i { color: var(--navy); }
+.strip span { color: #EAF8FD; }
+.strip .ar { color: #A8E1F3; }
+.trust { background: #F4F6FA; border-color: transparent; }
+
+/* 連携ボックスをナレッジ集約に統合 → 機能の図を拡大 */
+.bc .im { height: 50mm; }
+.sc { height: 39mm; }
+.duo { padding-top: 7mm; }
+.box.trust { padding: 4.5mm 5mm 5mm; }
+.strip { padding: 4.6mm 12mm; }
+.sc .tx { padding: 6.5mm 3.6mm; }
+.trust .g { grid-template-columns: repeat(4, 1fr); gap: 3.5mm; }
+.im.kn { padding-top: 4.5mm; }
+
+/* ───── 表面 SCENES v2：痛点の吹き出し → GBase の効果（数字） ───── */
+.sc2 { background: linear-gradient(180deg, #fff 0, #F1F5FA 28%); height: 113mm; }
+.pg { display: flex; align-items: stretch; margin-top: 5.5mm; height: 67mm; }
+.pains { flex: 0 0 76mm; position: relative; display: flex; flex-direction: column; justify-content: space-between; padding: 2mm 0; }
+.pb { position: relative; z-index: 1; background: #fff; border-radius: 3mm; box-shadow: 0 1.6mm 5mm rgba(15,23,42,.13); padding: 4.4mm 3.6mm; font-size: 10.6pt; font-weight: 900; color: var(--navy); white-space: nowrap; display: flex; align-items: center; gap: 2mm; }
+.pi svg { width: 5mm; height: 5mm; fill: none; stroke: var(--cyan); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; display: block; }
+.fi { position: absolute; width: 11mm; height: 13.5mm; background: #fff; border-radius: 1.4mm; box-shadow: 0 0.8mm 2.5mm rgba(15,23,42,.1); padding: 1.6mm 1.4mm; opacity: .9; }
+.fi i { display: inline-block; font-style: normal; font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 4.6pt; color: #fff; padding: 0.3mm 1mm; border-radius: 0.6mm; }
+.fi u { display: block; height: 0.9mm; background: #E3E8EF; border-radius: 1mm; margin-top: 1.3mm; text-decoration: none; }
+.fi u:last-child { width: 60%; }
+.mid { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.6mm; }
+.mid img { width: 23mm; height: 23mm; border-radius: 50%; display: block; box-shadow: 0 0 0 0.7mm #fff, 0 0 0 1.3mm var(--cyan), 0 1.5mm 5mm rgba(0,164,214,.35); }
+.mid .nara { background: var(--yellow); color: var(--navy); font-weight: 900; font-size: 9pt; padding: 1mm 3mm; border-radius: 4mm; white-space: nowrap; margin-bottom: 1mm; }
+.mid .arw { color: var(--cyan); font-size: 11pt; line-height: 1; margin-top: 0.6mm; }
+.gains { flex: 0 0 77mm; display: flex; flex-direction: column; justify-content: space-between; padding: 1mm 0; }
+.gb { background: var(--navy); border-radius: 3mm; height: 20mm; padding: 0 4mm; display: flex; flex-direction: column; justify-content: center; }
+.gb .num { font-weight: 900; font-size: 19pt; line-height: 1.1; color: #35C3EE; white-space: nowrap; }
+.gb .num small { font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 23pt; }
+.gb .num em { font-style: normal; font-size: 11pt; margin-left: 0.3mm; }
+.gb .num span { color: #6B7A94; font-size: 13pt; margin: 0 1.8mm; vertical-align: 0.6mm; }
+.gb .num small:first-child, .gb .num small:first-child + em { color: #8FA0BA; }
+.gl { font-size: 6.9pt; color: #C9D3E2; line-height: 1.5; margin-top: 0.8mm; white-space: nowrap; }
+.gl b { color: #fff; font-size: 8pt; margin-right: 1.5mm; }
+
+/* ───── 裏面 v4：3機能 ＋ 下段にナレッジ集約｜セキュリティ ───── */
+.feat2 { padding: 9mm 12mm 9mm; }
+.feat2 h2 { font-size: 19pt; }
+.big3 { margin-top: 6mm; }
+.bc .im { height: 47mm; }
+.bc h4 { font-size: 14.5pt; margin-top: 2mm; }
+.bc .s { font-size: 8.2pt; }
+.bc p { font-size: 8.8pt; min-height: 14.5mm; margin-top: 2mm; }
+.bc ul { padding-top: 2mm; margin-top: 2mm; }
+.bc li { font-size: 8.2pt; line-height: 1.75; }
+.bc li em { font-style: normal; font-size: 6.6pt; font-weight: 700; color: var(--navy); background: #35C3EE; border-radius: 1mm; padding: 0.2mm 1.4mm; margin-right: 1.2mm; white-space: nowrap; }
+.duo { padding-top: 6.5mm; gap: 4mm; align-items: stretch; }
+.box.kbox { flex: 0 0 84mm; background: var(--cyan-ll); padding: 4.5mm 5mm 4.5mm; }
+.box.trust { flex: 1; padding: 4.5mm 5mm 4.5mm; }
+.trust .g { grid-template-columns: 1fr 1fr; gap: 3mm 4mm; margin-top: 3mm; }
+.kbox p { font-size: 7.8pt; line-height: 1.6; color: var(--ink); margin-top: 1.6mm; }
+.kmock { display: flex; align-items: center; gap: 2mm; margin-top: 3mm; }
+.kcol { flex: 1; }
+.kmock .kf { width: auto; margin-bottom: 1.1mm; }
+.kmock .kc { margin: 0 0 1.1mm 0; padding: 1mm 1.8mm; }
+.kmock .kf:last-child, .kmock .kc:last-child { margin-bottom: 0; }
+.karw { color: var(--cyan); font-size: 8pt; }
+.kn2 { font-size: 7.4pt; font-weight: 700; color: var(--cyan-d); margin-top: 2.6mm; }
+.kn2::before { content: "✓ "; }
+
+/* TRUST：第三者認証バッジ */
+.certs { display: flex; gap: 2.4mm; margin-top: 2.6mm; }
+.cert { flex: 1; display: flex; align-items: center; gap: 2mm; background: #fff; border: 0.35mm solid var(--cyan); border-radius: 2mm; padding: 1.5mm 2.4mm; }
+.cert i { flex: 0 0 5mm; height: 5mm; border-radius: 50%; background: var(--cyan); color: #fff; font-style: normal; font-weight: 700; font-size: 8pt; display: flex; align-items: center; justify-content: center; }
+.cert b { display: block; font-size: 9.4pt; font-weight: 700; color: var(--navy); line-height: 1.2; white-space: nowrap; }
+.cert span { display: block; font-size: 6.4pt; font-weight: 700; color: var(--cyan-d); white-space: nowrap; }
+.trust .g { margin-top: 2.6mm; gap: 2.2mm 4mm; }
+.trust .g span { font-size: 7pt; line-height: 1.5; }
+.bc .im { height: 45mm; }
+
+.tn { font-size: 7pt; font-weight: 700; color: var(--cyan-d); margin-top: 2.4mm; }
+.tn::before { content: "✓ "; }
+.bc .im { height: 43mm; }
+.duo { padding-top: 5.5mm; }
+/* 下段 2 ボックスの体裁を統一：小見出し → タイトル → 黒の説明文 → 図 → ✓の一行 */
+.box.kbox, .box.trust { background: var(--cyan-ll); border: none; padding: 4.5mm 5mm; display: flex; flex-direction: column; }
+.kbox p, .trust p { font-size: 7.8pt; line-height: 1.6; color: var(--ink); font-weight: 400; margin-top: 1.6mm; }
+.kmock, .certs { margin-top: 3mm; }
+.trust .g span { white-space: nowrap; }
+.box .tn { margin-top: auto; padding-top: 2.6mm; font-size: 7.4pt; }
+.kmock .kc { justify-content: flex-start; gap: 1.6mm; background: #fff; border-color: var(--line); padding: 1.1mm 1.8mm; }
+.kmock .kc img { width: 4.6mm; height: 4.2mm; object-fit: contain; flex: 0 0 4.6mm; }
+.kmock .kc span { margin-left: auto; }
+.kmock .kf { padding: 1.3mm 1.6mm; }
+/* 表面フッター：細い帯 */
+.foot2 { position: absolute; left: 0; right: 0; bottom: 0; height: 11mm; background: var(--cyan); color: #fff; display: flex; align-items: center; padding: 0 12mm; gap: 4mm; }
+.foot2 b { font-size: 13pt; font-weight: 800; letter-spacing: .02em; }
+.foot2 span { flex: 1; font-size: 7.8pt; font-weight: 500; padding-left: 4mm; border-left: 0.3mm solid rgba(255,255,255,.55); }
+.foot2 em { font-style: normal; font-size: 12pt; font-weight: 700; }
+.foot2 small { font-size: 7.4pt; font-weight: 500; padding-left: 4mm; border-left: 0.3mm solid rgba(255,255,255,.55); }
+.sc2 { height: 121mm; }
+.sc2 .pg { height: 73mm; margin-top: 6.5mm; }
+.sc2 .gb { height: 21.5mm; }
+.note1 { font-size: 5.8pt; line-height: 1.5; color: #7A8498; margin-top: 3.2mm; text-align: center; }
+.sc2 .pg { height: 70mm; margin-top: 5.5mm; }
+/* 3ステップ：番号なし・矢印を強調 */
+.strip { gap: 3mm; }
+.strip .ar { flex: 0 0 7mm; height: 7mm; border-radius: 50%; background: var(--navy); display: flex; align-items: center; justify-content: center; }
+.strip .ar svg { width: 4.2mm; height: 4.2mm; fill: none; stroke: #fff; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.strip b { font-size: 8.8pt; }
+.bc .im { height: 49mm; }
+.feat2 { padding-top: 10mm; }
+.duo { padding-top: 7mm; }
+/* 裏面の重心：最下段をネイビーにして上下で締める */
+.cta { background: var(--navy); }
+.trial { box-shadow: none; }
+.co .nm { color: #fff; }
+.co p { color: #D5DCE8; }
+.co p .en { color: #5CD0F2; }
+.cta .note { color: #8A96AB; }
+/* 裏面にも黄色のアクセント（表面と揃える） */
+.strip .ar { background: var(--yellow); }
+.strip .ar svg { stroke: var(--navy); }
+.bc li em { background: var(--yellow); }
+.feat2 h2 span { color: var(--yellow); }
+.trial .t1 span { background: linear-gradient(transparent 62%, #FFE27A 62%); padding: 0 0.6mm; }
+.foot2 span { padding-left: 0; border-left: none; }
+/* トライアルカード：中身に合わせた幅にして右の余白をなくす */
+.trial { flex: 0 0 auto; padding: 3mm 6mm 3mm 4mm; gap: 5mm; }
+.trial img { width: 26mm; height: 26mm; }
+.trial .t1 { font-size: 17pt; white-space: nowrap; }
+.trial .t2 { font-size: 21pt; }
+.trial .t3 { font-size: 7.8pt; white-space: nowrap; }
+.cta .row { gap: 8mm; }
+.im img.fit.ct { padding: 1.5mm; }
+/* ISO バッジ：チェックは緑（「接続済み」と同じ緑） */
+.cert i { background: #1D8F4E; }
+.cert { border-color: #A9DFC0; }
+.cert span { color: #1D8F4E; }
+/* SCENES：背景は白。白い吹き出しは枠線と影で浮かせる */
+.sc2 { background: #fff; }
+.pb { border: 0.25mm solid #E3E9F0; box-shadow: 0 1.8mm 5.5mm rgba(15,23,42,.16); }
+.fi { border: 0.2mm solid #E3E9F0; box-shadow: 0 0.9mm 2.8mm rgba(15,23,42,.13); }
+/* Hero：少し濃い水色 → 下の白へグラデーション */
+.hero { background: linear-gradient(180deg, #D9F0FA 0%, #E6F5FC 45%, #F6FBFE 80%, #fff 100%); }
+.hero::before { border-color: #C3E6F5; }
+h1 .ul { background: none; padding: 0; }
+.stat .n { color: var(--navy); }
+.stat { border-color: #CFE3EE; }
+.stat .n.t, .stat .n .t2 { font-size: 15pt; line-height: 1.58; }
+h1 .hl { color: var(--cyan); }
+/* Hero：数値カードを外し、製品画面を大きく */
+.vis { height: 92mm; }
+.win img { width: calc(100% - 9mm); margin-left: 9mm; }
+/* SCENES：効果カードを狭め、痛点 → GBase → 効果 の矢印を強調 */
+.sc2 .pains { flex: 0 0 70mm; }
+.sc2 .gains { flex: 0 0 60mm; }
+.sc2 .mid { flex: 1; flex-direction: row; align-items: center; justify-content: center; gap: 2mm; padding: 0 1mm; }
+.mc { display: flex; flex-direction: column; align-items: center; gap: 1.6mm; }
+.fa { flex: 0 0 11mm; }
+.fa svg { width: 11mm; height: 6.6mm; display: block; fill: none; stroke: var(--navy); stroke-width: 4.5; stroke-linecap: round; stroke-linejoin: round; }
+.fa.fy svg { stroke: var(--cyan); }
+.sc2 .gb { padding: 0 3.6mm; }
+.sc2 .gb .num { font-size: 17pt; }
+.sc2 .gb .num small { font-size: 21pt; }
+.sc2 .gl { white-space: normal; margin-top: 0.6mm; }
+.sc2 .gl b { display: block; margin-right: 0; font-size: 7.8pt; }
+.sc2 .gl span { display: block; font-size: 6.6pt; line-height: 1.45; }
+.bc .im { background: #E3F2FA; }
+/* 3ステップを最下段の直前へ移動：下段に合わせた配置 */
+.strip { position: absolute; left: 0; right: 0; bottom: 47mm; margin: 0; }
+.duo { padding-top: 7mm; }
+.bc .im { height: 52mm; }
+/* 会社タグ：塗りつぶし → 線枠 */
+.co .lc { background: none; color: var(--yellow); border: 0.3mm solid var(--yellow); padding: 0.7mm 3mm; }
+/* 3ステップの矢印：円なし・黄色の太い矢印だけ */
+.strip .ar { background: none; border-radius: 0; flex: 0 0 9mm; height: auto; }
+.strip .ar svg { width: 7.5mm; height: 7.5mm; stroke: var(--yellow); stroke-width: 3.2; }
+/* 下段カードの上下の余白を揃える：ネイビー面との間 ＝ 3ステップ帯との間 */
+.feat2 { padding-bottom: 6.5mm; }
+.bc .im { height: 50mm; }
+.duo { padding-top: 6.5mm; }
+
+/* Networld 版：録音スマホ → Box 連携カード */
+.bxc { position: absolute; left: 0; bottom: 4mm; width: 52mm; background: #fff; border-radius: 2.6mm; border: 0.3mm solid #DCE3EC; padding: 2.6mm 3mm 2.8mm; z-index: 4; text-align: left; }
+.bxc .bh { display: flex; align-items: center; gap: 1.6mm; padding-bottom: 1.8mm; border-bottom: 0.25mm solid #E8EDF3; }
+.bxc .bh img { height: 5mm; }
+.bxc .bh b { font-size: 9pt; font-weight: 900; color: var(--navy); }
+.bxc .bh span { margin-left: auto; font-size: 6.4pt; font-weight: 700; color: #1D8F4E; }
+.bxc .bf { display: flex; align-items: center; gap: 1.6mm; font-size: 6.8pt; color: var(--ink); margin-top: 1.6mm; }
+.bxc .bf i { font-style: normal; color: #fff; font-size: 4.6pt; font-weight: 700; width: 5.2mm; height: 4mm; border-radius: 0.7mm; display: flex; align-items: center; justify-content: center; }
+.bxc .bs { margin-top: 2.2mm; background: var(--cyan-l); color: var(--cyan-d); font-size: 6.8pt; font-weight: 700; border-radius: 1.2mm; padding: 1.2mm 2mm; }
+.kc.kbx { border-color: var(--cyan); box-shadow: 0 0 0 0.4mm rgba(0,164,214,.25); }
+.kc span { white-space: nowrap; }
+
+/* Box カードを左上へ：下の画面の文字（エージェント カード）を隠さない */
+.bxc { left: -7mm; bottom: 10mm; }
+/* 印刷用：ぼかし付き box-shadow は Chrome の PDF で SMask（透明マスク）になり、
+   macOS プレビューが灰色/色付きの矩形として描く。印刷時はぼかし影を全て外し、線枠・ベタの輪で代替する */
+@media print {
+  * { box-shadow: none !important; }
+  .win, .pb, .fi, .trial { border: 0.3mm solid #D5DEE8 !important; }
+  .phone { border: 1.1mm solid #2A3140 !important; }
+  .mid img { border: 1.3mm solid var(--cyan); padding: 0.7mm; background: #fff; box-sizing: content-box; }
+  .phone .rec { outline: 0.6mm solid rgba(244,67,58,.35); outline-offset: 0.4mm; }
+  .fi { opacity: 1; }
+  .trial .t1 span { background: linear-gradient(#fff 62%, #FFE27A 62%); }  /* transparent を含むグラデも SMask になる */
+}
+</style>
+</head>
+<body>
+
+<!-- ═════════ 表面 ═════════ -->
+<section class="page">
+  <header class="hd">
+    <img src="assets/logo_gbase.png" alt="GBase">
+  </header>
+
+  <div class="hero">
+    <div class="pill">Box をお使いの会社の、AI ワークスペース</div>
+    <h1><span class="hl">Box にある資料を、</span><br><span class="ul">AI で活かせる知識に。</span></h1>
+    <p class="lead">Box とつなぐだけ。いまあるファイルを移行せずに、<br>AI で探して、まとめて、資料にできます。</p>
+    <div class="vis">
+      <div class="win">
+        <div class="bar"><i></i><i></i><i></i><b>GBase ｜ ホーム</b></div>
+        <img src="assets/home.png" alt="GBase のホーム画面">
+      </div>
+      <div class="bxc">
+        <div class="bh"><img src="assets/logo_box.png" alt="Box"><b>Box</b><span>● 接続済み</span></div>
+        <div class="bf"><i style="background:#D24726">P</i>提案書_v2.pptx</div>
+        <div class="bf"><i style="background:#1D8F4E">X</i>価格表_2026.xlsx</div>
+        <div class="bf"><i style="background:#D93025">PDF</i>製品仕様書.pdf</div>
+        <div class="bs">⟳ 自動で同期 → AI で検索・活用</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scenes sc2">
+    <h2>こんな場面、ありませんか</h2>
+    <div class="pg">
+      <div class="pains">
+        <span class="fi" style="left:63mm;top:-2mm;transform:rotate(8deg)"><i style="background:#3DA35D">XLSX</i><u></u><u></u></span>
+        <span class="fi" style="left:52mm;top:5mm;transform:rotate(-7deg)"><i style="background:#D24726">PPTX</i><u></u><u></u></span>
+        <span class="fi" style="left:0mm;top:22mm;transform:rotate(-9deg)"><i style="background:#D93025">PDF</i><u></u><u></u></span>
+        <span class="fi" style="left:9mm;top:30mm;transform:rotate(7deg)"><i style="background:#2B6BD6">DOCX</i><u></u><u></u></span>
+        <span class="fi" style="left:64mm;top:49mm;transform:rotate(-8deg)"><i style="background:#F08A24">M4A</i><u></u><u></u></span>
+        <span class="fi" style="left:54mm;top:44mm;transform:rotate(9deg)"><i style="background:#D93025">PDF</i><u></u><u></u></span>
+        <div class="pb" style="transform:rotate(-1.4deg);align-self:flex-start"><span class="pi"><svg viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M9 12h6M9 16h4"/></svg></span>「Box のどこに置いたっけ？」</div>
+        <div class="pb" style="transform:rotate(1.1deg);align-self:flex-end"><span class="pi"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg></span>「議事録がまだ書けていない」</div>
+        <div class="pb" style="transform:rotate(-0.8deg);align-self:flex-start"><span class="pi"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3"/><path d="M6 19a6 6 0 0 1 12 0"/><circle cx="5" cy="10" r="2"/><circle cx="19" cy="10" r="2"/></svg></span>「この資料は、あの人しか作れない」</div>
+      </div>
+      <div class="mid">
+        <div class="fa"><svg viewBox="0 0 40 24"><path d="M2 12h30M24 4l9 8-9 8"/></svg></div>
+        <div class="mc"><span class="nara">GBase なら</span><img src="assets/mascot.png" alt=""></div>
+        <div class="fa fy"><svg viewBox="0 0 40 24"><path d="M2 12h30M24 4l9 8-9 8"/></svg></div>
+      </div>
+      <div class="gains">
+        <div class="gb"><div class="num">数<em>秒</em></div><div class="gl"><b>過去の経緯・資料の検索</b><span>Box の資料に聞くだけ。出典つきで回答※</span></div></div>
+        <div class="gb"><div class="num"><small>14</small><em>日</em><span>→</span>即<em>日</em></div><div class="gl"><b>提案資料の作成サイクル</b><span>Box の資料から AI がスライドを作成※</span></div></div>
+        <div class="gb"><div class="num"><small>30</small><em>分</em><span>→</span>数<em>分</em></div><div class="gl"><b>会議後の議事録整理</b><span>録るだけで、御社の書式のまま完成※</span></div></div>
+      </div>
+    </div>
+    <p class="note1">※ 本紙の時間・効果等の数値は、GBase 導入企業の実運用および社内ベンチマークをもとに推計した目安です。会議の長さ・業種・案件規模により個別差があります。</p>
+  </div>
+
+  <div class="foot2">
+    <span>Box の資料を、探す・まとめる・資料にするまで AI にまかせられるワークスペース</span>
+    <em class="en">gbase.ai</em>
+    <small>Sparticle株式会社</small>
+  </div>
+</section>
+
+<!-- ═════════ 裏面 ═════════ -->
+<section class="page">
+  <header class="hd">
+    <img src="assets/logo_gbase.png" alt="GBase">
+  </header>
+
+  <div class="feat2">
+    <h2>Box の資料を起点に、<span>GBase ひとつで</span></h2>
+    <div class="big3">
+      <div class="bc">
+        <div class="im"><img class="fit" style="object-position:center" src="assets/feat_chat.jpg" alt="会議の記録から出典つきで回答"></div>
+        <div class="tx"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg></div>
+          <h4>AI チャット検索</h4><div class="s">Box の資料に質問</div>
+          <p>ふだんの言葉で聞くだけ。Box の資料と会議の記録を横断して探し、出典つきで答えます。</p>
+          <ul><li>根拠をその場で確認</li><li>プロジェクトごとに権限を設定</li><li><em>ディープリサーチ</em>社内 ＋ Web を深く調査</li></ul></div>
+      </div>
+      <div class="bc">
+        <div class="im"><img class="fit" style="object-position:center" src="assets/feat_slides.jpg" alt="テンプレートを選んでスライドを生成"></div>
+        <div class="tx"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M12 16v4M8 20h8M7 12l3-3 3 2 4-4"/></svg></div>
+          <h4>AI スライド</h4><div class="s">資料づくりを自動化</div>
+          <p>Box の資料や回答から、スライドを自動で作成。対話しながらその場で修正できます。</p>
+          <ul><li>PowerPoint 形式で書き出し</li><li>書き出し後も編集可能</li><li>PDF / Excel でも出力</li></ul></div>
+      </div>
+      <div class="bc">
+        <div class="im"><img class="fit" style="object-fit:contain;object-position:center" src="assets/feat_meeting.png" alt="多言語会議のリアルタイム文字起こしと訳文"></div>
+        <div class="tx"><div class="ic"><svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></div>
+          <h4>AI 会議ノート</h4><div class="s">録音から議事録まで</div>
+          <p>PC や iPhone で録るだけ。話者ごとの文字起こしと、決定事項・ToDo の要約が自動で整います。</p>
+          <ul><li>御社の Word / Excel 様式で出力</li><li>Zoom / Teams の会議も記録</li><li>10言語の会議に対応</li></ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="duo">
+    <div class="box kbox">
+      <h5>Box とつなぐだけ</h5>
+      <p>Box にある資料が、移行作業なしで AI の回答ソースになります。SharePoint・Google ドライブにも対応。</p>
+      <div class="kmock">
+        <div class="kcol">
+          <div class="kf"><i style="background:#D24726">P</i>提案書_v2.pptx</div>
+          <div class="kf"><i style="background:#1D8F4E">X</i>価格表_2026.xlsx</div>
+          <div class="kf"><i style="background:#D93025">PDF</i>製品仕様書.pdf</div>
+        </div>
+        <div class="karw">▶</div>
+        <div class="kcol">
+          <div class="kc kbx"><img src="assets/logo_box.png" alt=""><b>Box</b><span>● 接続済み</span></div>
+          <div class="kc"><img src="assets/logo_sharepoint.png" alt=""><b>SharePoint</b><span>対応</span></div>
+          <div class="kc"><img src="assets/logo_gdrive.png" alt=""><b>Google ドライブ</b><span>対応</span></div>
+        </div>
+      </div>
+      <div class="tn">Box と自動で同期。チームで共有できます</div>
+    </div>
+    <div class="box trust">
+      <h5>会社の情報を預けても、安心</h5>
+      <p>お預かりする会議・文書データは、第三者認証を取得した体制で管理します。</p>
+      <div class="certs">
+        <div class="cert"><i>✓</i><div><b class="en">ISO/IEC 27001</b><span>ISMS 認証取得</span></div></div>
+        <div class="cert"><i>✓</i><div><b class="en">ISO/IEC 27017</b><span>ISMS クラウドセキュリティ認証取得</span></div></div>
+      </div>
+      <div class="g">
+        <div><b>AI 学習に利用なし</b><span>会議・文書データはモデル学習の対象外</span></div>
+        <div><b>アクセス権限管理</b><span>AI の回答も権限の範囲内だけ</span></div>
+        <div><b>データ分離</b><span>ISMAP 登録の AWS で組織ごとに保管</span></div>
+        <div><b>監査ログ</b><span>誰が・いつ・何をしたかを記録</span></div>
+      </div>
+      <div class="tn">セキュリティチェックシートへの回答も承ります</div>
+    </div>
+  </div>
+
+  <div class="strip">
+    <div class="lb">使い方は<br>3ステップ</div>
+    <div class="st"><div class="ic"><svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></div><div><b>いつもどおり仕事をする</b><span>会議を録れば議事録も完成</span></div></div>
+    <div class="ar"><svg viewBox="0 0 24 24"><path d="M4 12h14M12 5l7 7-7 7"/></svg></div>
+    <div class="st"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 16V4M7 9l5-5 5 5M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"/></svg></div><div><b>Box をつないでおく</b><span>いまある資料がそのまま知識に</span></div></div>
+    <div class="ar"><svg viewBox="0 0 24 24"><path d="M4 12h14M12 5l7 7-7 7"/></svg></div>
+    <div class="st"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg></div><div><b>あとは仕事を頼むだけ</b><span>スライドやレポートに仕上がる</span></div></div>
+  </div>
+
+  <div class="cta">
+    <div class="row">
+      <div class="trial">
+        <img src="assets/qr_gbase.png" alt="gbase.ai QR">
+        <div>
+          <div class="t1"><span>14日間 無料トライアル</span></div>
+          <div class="t2">gbase.ai</div>
+          <div class="t3">導入のご相談・デモのご依頼も QR コードから</div>
+        </div>
+      </div>
+      <div class="co">
+        <span class="lc">中央区・日本橋の AI 企業です</span>
+        <div class="nm">Sparticle株式会社</div>
+        <p>〒103-0001<br>東京都中央区日本橋小伝馬町6-12 日本橋森ビル 3F<br><span class="en">https://www.sparticle.com/</span></p>
+      </div>
+    </div>
+    <p class="note">※ 記載の会社名・製品名は各社の商標または登録商標です。</p>
+  </div>
+</section>
+
+<script>
+(function(){var w=document.getElementById('wave'),h=[5,9,4,11,13,7,12,3,9,14,6,11,13,5,10,12,4,8,13,7,11,5,9,12,6,10,4,8];
+h.forEach(function(v,i){var b=document.createElement('i');b.style.height=v+'mm';if(i%4===2)b.style.background='#7FD6EE';w.appendChild(b);});})();
+</script>
+</body>
+</html>

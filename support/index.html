@@ -205,7 +205,9 @@ h1 .b { color: var(--brand); }
 /* 2026-10-26 ① Hero：吹き出しがマスコットの肩に重なる → マスコットを少し小さく左へ、吹き出しを右に寄せて幅を詰め、間を空ける */
 .mascot { left: 104mm; height: 72mm; }
 .bub { max-width: 50mm; }
-.bub.q, .bub.a { right: 10mm; }
+/* 2026-10-26 吹き出しを左右に互い違い（チャット風）：質問＝右寄せ、AI 回答＝左寄せ */
+.bub.q { right: 10mm; left: auto; max-width: 44mm; }
+.bub.a { left: 146mm; right: auto; max-width: 46mm; }
 
 /* 2026-10-26 ② 「よく聞かれる質問」を「主な機能」と同じ楼層に統合：濃紺の独立ボックス → 機能面の中の白カード（ブランド線枠・淡色チップ） */
 .faq.in-feat { margin: 4mm 0 0; background: #fff; color: var(--ink); border: 0.3mm solid var(--brand-line); border-radius: 2.6mm; padding: 3mm 4.5mm 3.2mm; display: grid; grid-template-columns: 50mm 1fr; column-gap: 5mm; align-items: center; }

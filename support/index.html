@@ -201,6 +201,20 @@ h1 .b { color: var(--brand); }
 
 /* 印刷用：ぼかし付き box-shadow は PDF で SMask になるため無効化（layout-rules §5） */
 @media print { * { box-shadow: none !important; } .bub.a, .fwrap > img { outline: 0.25mm solid var(--line); } }
+
+/* 2026-10-26 ① Hero：吹き出しがマスコットの肩に重なる → マスコットを少し小さく左へ、吹き出しを右に寄せて幅を詰め、間を空ける */
+.mascot { left: 104mm; height: 72mm; }
+.bub { max-width: 50mm; }
+.bub.q, .bub.a { right: 10mm; }
+
+/* 2026-10-26 ② 「よく聞かれる質問」を「主な機能」と同じ楼層に統合：濃紺の独立ボックス → 機能面の中の白カード（ブランド線枠・淡色チップ） */
+.faq.in-feat { margin: 4mm 0 0; background: #fff; color: var(--ink); border: 0.3mm solid var(--brand-line); border-radius: 2.6mm; padding: 3mm 4.5mm 3.2mm; display: grid; grid-template-columns: 50mm 1fr; column-gap: 5mm; align-items: center; }
+.faq.in-feat .t { grid-row: 1 / span 2; font-size: 9.4pt; line-height: 1.55; color: var(--navy); }
+.faq.in-feat .t em { color: var(--brand); }
+.faq.in-feat .tags { margin-top: 0; gap: 1.4mm; }
+.faq.in-feat .tags span { background: var(--brand-ll); border: 0.25mm solid var(--brand-line); color: var(--brand-d); font-weight: 700; font-size: 7pt; padding: 0.9mm 2.2mm; }
+.faq.in-feat .s { color: var(--sub); font-size: 6.8pt; margin-top: 1.8mm; }
+.feat { padding-bottom: 4.5mm; }
 </style>
 </head>
 <body>
@@ -217,7 +231,7 @@ h1 .b { color: var(--brand); }
     </div>
     <img class="mascot" src="assets/mascot.png" alt="">
     <div class="bub q" style="top:8mm">化粧品売場はどこですか？</div>
-    <div class="bub a" style="top:15mm">1 階、中央エスカレーター付近です。<span class="map">◎ フロアマップで道順を表示</span></div>
+    <div class="bub a" style="top:15mm">1 階、中央エスカレーター<br>付近です。<span class="map">◎ フロアマップで道順を表示</span></div>
     <div class="bub q" style="top:33mm">Where is the tax-free counter?</div>
     <div class="bub a" style="top:40mm">It's on the 1st floor, next to<br>the information desk.</div>
     <div class="lang">◎ 10+ 多言語対応</div>
@@ -294,12 +308,11 @@ h1 .b { color: var(--brand); }
         <div class="fi"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div><div><b>運用分析</b><span>よく聞かれる質問と未回答の質問を可視化し、FAQ を継続的に改善</span></div></div>
       </div>
     </div>
-  </div>
-
-  <div class="faq">
-    <div class="t">百貨店で<em>よく聞かれる質問</em>も、登録した情報から AI が回答</div>
-    <div class="tags"><span>売場・ブランドの場所</span><span>営業時間・休業日</span><span>催事・物産展の会期</span><span>免税カウンター・決済方法</span><span>ギフト・包装・配送</span><span>駐車場・提携サービス</span></div>
-    <div class="s">売場の情報や催事の案内を登録しておけば、館内端末・Web・電話のどこから聞かれても同じ内容で答えます。</div>
+    <div class="faq in-feat">
+      <div class="t">百貨店で<em>よく聞かれる質問</em>も、<br>登録した情報から AI が回答</div>
+      <div class="tags"><span>売場・ブランドの場所</span><span>営業時間・休業日</span><span>催事・物産展の会期</span><span>免税カウンター・決済方法</span><span>ギフト・包装・配送</span><span>駐車場・提携サービス</span></div>
+      <div class="s">売場の情報や催事の案内を登録しておけば、館内端末・Web・電話のどこから聞かれても同じ内容で答えます。</div>
+    </div>
   </div>
 
   <div class="sec cases">
